@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WorkLink AI - منصة التوظيف الذكية المعتمدة على الذكاء الاصطناعي | ابحث عن وظيفة أو انشر وظيفة">
+    <meta name="keywords" content="توظيف, وظائف, عمل, ذكاء اصطناعي, AI, منصة توظيف, باحث عن عمل, شركات, مستقلين, Freelance">
+    <meta name="author" content="عمرو">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="WorkLink AI - منصة التوظيف الذكية">
+    <meta property="og:description" content="منصة توظيف ذكية تجمع بين الذكاء الاصطناعي وسهولة الاستخدام لربط المواهب بالفرص">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://worklink.ai">
+    <meta property="og:image" content="https://worklink.ai/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WorkLink AI - منصة التوظيف الذكية">
+    <meta name="twitter:description" content="منصة توظيف ذكية تجمع بين الذكاء الاصطناعي وسهولة الاستخدام">
+    <link rel="canonical" href="https://worklink.ai">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "WorkLink AI",
+            "url": "https://worklink.ai",
+            "description": "منصة توظيف ذكية معتمدة على الذكاء الاصطناعي",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://worklink.ai/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+    <title>WorkLink AI | منصة التوظيف الذكية الأولى في العالم العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+                    colors: {
+                        primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' },
+                        accent: { 50:'#fdf4ff',100:'#fae8ff',200:'#f5d0fe',300:'#f0abfc',400:'#e879f9',500:'#d946ef',600:'#c026d3',700:'#a21caf',800:'#86198f',900:'#701a75' }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s infinite linear'
+                    },
+                    keyframes: {
+                        float: { '0%,100%':{transform:'translateY(0px)'}, '50%':{transform:'translateY(-20px)'} },
+                        glow: { '0%':{boxShadow:'0 0 20px rgba(59,130,246,0.3)'}, '100%':{boxShadow:'0 0 45px rgba(217,70,239,0.5)'} },
+                        slideUp: { '0%':{transform:'translateY(30px)',opacity:'0'}, '100%':{transform:'translateY(0)',opacity:'1'} },
+                        fadeIn: { '0%':{opacity:'0'}, '100%':{opacity:'1'} },
+                        pulseSoft: { '0%,100%':{opacity:'1'}, '50%':{opacity:'0.7'} },
+                        shimmer: { '0%':{backgroundPosition:'-200% 0'}, '100%':{backgroundPosition:'200% 0'} }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-500 font-cairo" id="mainBody">
+    <div id="globalLoader" class="fixed inset-0 bg-white dark:bg-slate-900 z-[99999] flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative">
+            <div class="w-24 h-24 rounded-full border-4 border-transparent border-t-primary-500 border-r-accent-500 animate-spin"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-briefcase text-3xl text-primary-500 animate-pulse-soft"></i>
+            </div>
+        </div>
+        <p class="mt-6 text-2xl font-bold gradient-text">WorkLink AI</p>
+        <p class="mt-2 text-slate-500 dark:text-slate-400 text-sm">جاري تحميل المنصة...</p>
+    </div>
+    <div id="offlineBanner" class="hidden fixed top-0 left-0 right-0 bg-red-500 text-white text-center py-2 z-[9999] font-semibold text-sm">
+        <i class="fas fa-wifi ml-2"></i> أنت غير متصل بالإنترنت حالياً
+    </div>
+    <div id="maintenanceModal" class="hidden modal-overlay z-[99990]">
+        <div class="glass-card p-10 text-center max-w-md mx-4">
+            <i class="fas fa-tools text-6xl text-yellow-500 mb-4"></i>
+            <h2 class="text-2xl font-bold mb-2">صيانة جارية</h2>
+            <p class="text-slate-500 dark:text-slate-400">نقوم بتحديث المنصة حالياً، سنعود قريباً</p>
+            <button onclick="closeMaintenance()" class="mt-6 gradient-btn text-white px-6 py-2 rounded-full">حسناً</button>
+        </div>
+    </div>
+    <div id="app" class="min-h-screen flex flex-col">
+        <nav id="mainNav" class="sticky top-0 z-[9997] backdrop-blur-xl bg-white/75 dark:bg-slate-900/80 shadow-sm border-b border-gray-200/30 dark:border-gray-700/20 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center gap-2 cursor-pointer" onclick="navigateTo('home')">
+                        <div class="w-11 h-11 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg animate-glow">
+                            <span class="text-white font-bold text-2xl">W</span>
+                        </div>
+                        <span class="text-xl font-bold gradient-text hidden sm:block">WorkLink AI</span>
+                    </div>
+                    <div class="hidden lg:flex items-center gap-5" id="desktopMenu">
+                        <a href="#" onclick="navigateTo('home')" class="nav-link active text-slate-700 dark:text-slate-200 text-sm font-semibold">الرئيسية</a>
+                        <a href="#" onclick="navigateTo('jobs')" class="nav-link text-slate-700 dark:text-slate-200 text-sm font-semibold">الوظائف</a>
+                        <a href="#" onclick="navigateTo('companies')" class="nav-link text-slate-700 dark:text-slate-200 text-sm font-semibold">الشركات</a>
+                        <a href="#" onclick="navigateTo('seekers')" class="nav-link text-slate-700 dark:text-slate-200 text-sm font-semibold">باحثون عن عمل</a>
+                        <a href="#" onclick="navigateTo('freelancers')" class="nav-link text-slate-700 dark:text-slate-200 text-sm font-semibold">مستقلون</a>
+                        <a href="#" onclick="navigateTo('blog')" class="nav-link text-slate-700 dark:text-slate-200 text-sm font-semibold">المدونة</a>
+                        <a href="#" onclick="navigateTo('post-job')" class="gradient-btn text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">انشر وظيفة</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition text-lg" onclick="toggleTheme()" aria-label="تبديل الوضع الليلي">
+                            <i class="fas fa-moon dark:hidden text-slate-600"></i>
+                            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                        </button>
+                        <button class="lg:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" onclick="toggleMobileMenu()" aria-label="القائمة">
+                            <i class="fas fa-bars text-xl text-slate-600 dark:text-slate-300"></i>
+                        </button>
+                        <button onclick="navigateTo('login')" class="hidden sm:block px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-full font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 text-sm">تسجيل الدخول</button>
+                        <button onclick="navigateTo('register')" class="hidden sm:block px-4 py-2 border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white rounded-full font-semibold transition-all duration-300 text-sm">إنشاء حساب</button>
+                    </div>
+                </div>
+                <div id="mobileMenu" class="hidden lg:hidden pb-4 border-t border-gray-200 dark:border-gray-700 mt-2 pt-4 space-y-3">
+                    <a href="#" onclick="navigateTo('home');toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold">الرئيسية</a>
+                    <a href="#" onclick="navigateTo('jobs');toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold">الوظائف</a>
+                    <a href="#" onclick="navigateTo('companies');toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold">الشركات</a>
+                    <a href="#" onclick="navigateTo('seekers');toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold">باحثون عن عمل</a>
+                    <a href="#" onclick="navigateTo('freelancers');toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold">مستقلون</a>
+                    <a href="#" onclick="navigateTo('blog');toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold">المدونة</a>
+                    <a href="#" onclick="navigateTo('post-job');toggleMobileMenu()" class="block py-2 px-3 gradient-btn text-white rounded-full text-center font-bold">انشر وظيفة</a>
+                    <div class="flex gap-2 pt-2">
+                        <button onclick="navigateTo('login')" class="flex-1 py-2 bg-primary-500 text-white rounded-full font-semibold text-sm">تسجيل الدخول</button>
+                        <button onclick="navigateTo('register')" class="flex-1 py-2 border border-primary-500 text-primary-500 rounded-full font-semibold text-sm">إنشاء حساب</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main id="mainContent" class="flex-grow page-transition"></main>
+        <footer class="bg-slate-800 dark:bg-slate-950 text-slate-300 pt-16 pb-6 mt-auto border-t border-slate-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+                    <div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center"><span class="text-white font-bold text-xl">W</span></div>
+                            <span class="text-xl font-bold text-white">WorkLink AI</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">منصة التوظيف الذكية الأولى في العالم العربي.</p>
+                        <div class="flex gap-2 mt-4">
+                            <a href="#" class="w-9 h-9 rounded-full bg-slate-700 hover:bg-primary-500 flex items-center justify-center transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-slate-700 hover:bg-primary-500 flex items-center justify-center transition"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-slate-700 hover:bg-primary-500 flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-4">روابط سريعة</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" onclick="navigateTo('jobs')" class="hover:text-primary-400">الوظائف</a></li>
+                            <li><a href="#" onclick="navigateTo('companies')" class="hover:text-primary-400">الشركات</a></li>
+                            <li><a href="#" onclick="navigateTo('freelancers')" class="hover:text-primary-400">مستقلون</a></li>
+                            <li><a href="#" onclick="navigateTo('blog')" class="hover:text-primary-400">المدونة</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-4">للباحثين عن عمل</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:text-primary-400">أنشئ سيرتك الذاتية</a></li>
+                            <li><a href="#" class="hover:text-primary-400">حسّن CV بالذكاء الاصطناعي</a></li>
+                            <li><a href="#" class="hover:text-primary-400">وظائف عن بعد</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-4">تواصل معنا</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-envelope ml-2 text-primary-400"></i> info@worklink.ai</li>
+                            <li><i class="fas fa-phone ml-2 text-primary-400"></i> 01104400000</li>
+                            <li><i class="fas fa-map-marker-alt ml-2 text-primary-400"></i> الرياض، السعودية</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-slate-700 pt-6 text-center text-sm">
+                    <p>© 2026 <span class="font-bold text-white">WorkLink AI</span>. جميع الحقوق محفوظة.</p>
+                    <p class="mt-2">المطور: <span class="text-primary-400 font-bold">عمرو</span> | للتواصل: <span class="text-white font-semibold">01104400000</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="toastContainer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
